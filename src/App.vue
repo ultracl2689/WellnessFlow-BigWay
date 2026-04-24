@@ -81,6 +81,7 @@ function scrollTo(id) {
     </template>
 
     <div class="py-10 px-5 text-center bg-white">
+      <h2 class="text-2xl font-bold text-gray-800 mb-5">想知道更多資訊嗎？</h2>
       <h2 class="text-2xl font-bold text-gray-800 mb-5">
         歡迎詢問帶你來的朋友！
       </h2>
