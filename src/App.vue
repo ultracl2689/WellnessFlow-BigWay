@@ -1,16 +1,16 @@
 <script setup>
-import { ref } from 'vue'
-import ComingSoon from './components/ComingSoon.vue'
+import { ref } from "vue";
+import ComingSoon from "./components/ComingSoon.vue";
 
-const base = import.meta.env.BASE_URL
-const images = Array.from({ length: 7 }, (_, i) => `${base}${i + 1}.jpg`)
+const base = import.meta.env.BASE_URL;
+const images = Array.from({ length: 7 }, (_, i) => `${base}${i + 1}.jpg`);
 
 // 開發者模式：設為 true 時顯示「暫無此頁面」佔位頁
-const isDev = import.meta.env.DEV
-const devMode = ref(false)
+const isDev = import.meta.env.DEV;
+const devMode = ref(false);
 
 function scrollTo(id) {
-  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+  document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 }
 </script>
 
@@ -19,11 +19,15 @@ function scrollTo(id) {
   <button
     v-if="isDev"
     class="fixed top-3 right-3 z-50 w-10 h-10 rounded-full shadow-lg flex items-center justify-center text-xs font-bold transition-all duration-300 cursor-pointer"
-    :class="devMode ? 'bg-amber-500 text-white' : 'bg-gray-800/60 text-white/80 backdrop-blur-sm'"
+    :class="
+      devMode
+        ? 'bg-amber-500 text-white'
+        : 'bg-gray-800/60 text-white/80 backdrop-blur-sm'
+    "
     :title="devMode ? '返回正常頁面' : '切換開發者模式（顯示佔位頁）'"
     @click="devMode = !devMode"
   >
-    {{ devMode ? '✕' : 'DEV' }}
+    {{ devMode ? "✕" : "DEV" }}
   </button>
 
   <!-- 佔位頁面 -->
@@ -77,17 +81,9 @@ function scrollTo(id) {
     </template>
 
     <div class="py-10 px-5 text-center bg-white">
-      <h2 class="text-2xl font-bold text-gray-800 mb-5">想知道更多資訊嗎？</h2>
-      <el-button
-        type="success"
-        size="large"
-        round
-        tag="a"
-        href="https://docs.google.com/forms/d/e/1FAIpQLSeDzGj9mdnR_P8A7BJplJ8mSK6aIkLHxkqp4-_J7eZuwE0ACQ/viewform"
-        class="!text-lg !px-8 !py-5"
-      >
-        馬上報名 ▶
-      </el-button>
+      <h2 class="text-2xl font-bold text-gray-800 mb-5">
+        歡迎詢問帶你來的朋友！
+      </h2>
     </div>
   </div>
 </template>
