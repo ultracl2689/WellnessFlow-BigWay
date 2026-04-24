@@ -17,7 +17,7 @@ bun dev
 
 ```js
 export default defineConfig({
-  base: '/WellnessFlow/',
+  base: '/WellnessFlow-BigWay/',
   // ...
 })
 ```
