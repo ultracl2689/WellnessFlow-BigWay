@@ -76,6 +76,29 @@ function scrollTo(id) {
           ◂ 回講師陣容
         </button>
       </div>
+      <!-- 第7張圖：開班資訊，覆蓋更新日期 -->
+      <div v-else-if="index === 6" class="relative @container">
+        <img :src="src" alt="開班資訊" class="w-full block" />
+        <div
+          class="absolute inset-x-0 bg-white flex flex-col items-center justify-center select-none"
+          style="top: 34.5%; height: 13.5%;"
+        >
+          <!-- 開班日期與時間 -->
+          <div class="flex items-center justify-center gap-[3cqw] mb-[0.8cqw]">
+            <span class="text-[#eb5b7d] font-black text-[13.5cqw] leading-none tracking-tight">
+              10/31
+            </span>
+            <div class="text-[#3c3b51] font-black text-left flex flex-col justify-center leading-tight">
+              <span class="text-[4.6cqw] tracking-[0.25em]">正式開班</span>
+              <span class="text-[3.9cqw] tracking-wider mt-[0.2cqw]">13:00-16:00</span>
+            </div>
+          </div>
+          <!-- 上課時間 -->
+          <div class="text-[#4a784d] font-bold text-[3.8cqw] tracking-normal leading-tight">
+            上課時間:10/31、11/7(連續兩個星期六)
+          </div>
+        </div>
+      </div>
       <!-- 其他圖片 -->
       <img v-else :src="src" :alt="`圖片 ${index + 1}`" class="w-full block" />
     </template>
